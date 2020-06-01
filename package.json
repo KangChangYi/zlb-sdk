@@ -1,12 +1,11 @@
 {
   "name": "ybj-zlb-sdk",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "封装 浙里办 JSSDK 的 npm 库",
-  "main": "./dist/bundle.js",
+  "main": "./dist/index.js",
   "scripts": {
     "bundle": "rollup --config",
-    "build": "npm run bundle",
-    "prepublish": "tsc src/modules/index.ts"
+    "build": "npm run bundle"
   },
   "repository": {
     "type": "git",
