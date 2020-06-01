@@ -4,7 +4,8 @@
     "lib": ["dom", "dom.iterable", "esnext"],
     "module": "esnext",
     "baseUrl": "src",
-    "strict": true
+    "strict": true,
+    "declaration": true
   },
   "include": ["src"]
 }

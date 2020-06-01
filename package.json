@@ -1,11 +1,12 @@
 {
   "name": "ybj-zlb-sdk",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "封装 浙里办 JSSDK 的 npm 库",
-  "main": "index.js",
+  "main": "./dist/bundle.js",
   "scripts": {
     "bundle": "rollup --config",
-    "build": "npm run bundle"
+    "build": "npm run bundle",
+    "prepublish": "tsc src/modules/index.ts"
   },
   "repository": {
     "type": "git",
@@ -27,7 +28,7 @@
     "babel-preset-stage-2": "^6.5.0",
     "rollup-plugin-babel": "^3.0.7",
     "rollup-plugin-terser": "^6.1.0",
-    "@rollup/plugin-typescript": "^4.1.2",
+    "rollup-plugin-typescript2": "^0.27.1",
     "tslib": "^2.0.0",
     "typescript": "^3.9.3",
     "uglify-js": "^3.9.4"
