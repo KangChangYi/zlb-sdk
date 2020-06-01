@@ -3,6 +3,7 @@ const sdkNameList: Array<string> = [
 
   "dd.biz.user.getUserType",
   "dd.biz.user.login",
+  "dd.biz.user.realAuthentication",
 
   "dd.biz.util.openLink",
   "dd.biz.util.selectLocalCity",

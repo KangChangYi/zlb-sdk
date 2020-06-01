@@ -1,5 +1,19 @@
-import { initSDK } from "../modules/index";
+import {
+  _zlbGoLogin,
+  _zlbGetLocation,
+  _zlbOpenLinkInNewWebView,
+  _zlbGetLocalCity,
+  _zlbSelectCity,
+  _zlbCloseWindow,
+  _zlbSetTitle,
+} from "./modules/index";
 
 export default {
-  initSDK
+  _zlbGoLogin,
+  _zlbGetLocation,
+  _zlbOpenLinkInNewWebView,
+  _zlbGetLocalCity,
+  _zlbSelectCity,
+  _zlbCloseWindow,
+  _zlbSetTitle,
 };

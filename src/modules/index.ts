@@ -1,5 +1,11 @@
 import { getReady } from "./initSDK";
 
+declare global {
+  interface Window {
+    dd: any;
+  }
+}
+
 interface ISdkParam {
   func: Function;
   params?: {};
@@ -26,7 +32,7 @@ const dd = window.dd;
  * @description 0 为公务员、1 为个人（除公务员）、2 为法人
  */
 export function _zlbGetUserType(): Promise<{
-  userType: number;
+  userType: 0 | 1 | 2;
 }> {
   return getReady().then(() => {
     return _useSdk({
@@ -56,7 +62,7 @@ export function _zlbGetLocation(): Promise<{
   latitude: number;
   cityName: string;
   region: string;
-  townCode: number;
+  townCode?: number;
   detailAddress: string;
 }> {
   return getReady().then(() => {
@@ -133,6 +139,31 @@ export function _zlbSetTitle(title: string) {
       func: dd.biz.navigation.setTitle,
       params: {
         title,
+      },
+    });
+  });
+}
+
+/**
+ * 浙里办 jssdk -> 实人认证
+ */
+export function _zlbRealAuthentication(
+  appId: string,
+  certNo: string,
+  certName: string
+): Promise<{
+  status: "success" | "fail" | "complete";
+  msg: string;
+  pass: boolean;
+  passId: string;
+}> {
+  return getReady().then(() => {
+    return _useSdk({
+      func: dd.biz.user.realAuthentication,
+      params: {
+        appId,
+        certNo,
+        certName,
       },
     });
   });
