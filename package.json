@@ -11,6 +11,9 @@
     "type": "git",
     "url": "git@47.111.104.236:ybj-fe/ybj-zlb-sdk.git"
   },
+  "files": [
+    "dist"
+  ],
   "keywords": [],
   "author": "",
   "license": "ISC",
