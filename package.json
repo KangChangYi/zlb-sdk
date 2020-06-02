@@ -7,6 +7,7 @@
     "bundle": "rollup --config",
     "build": "npm run bundle"
   },
+  "typings": "dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git@47.111.104.236:ybj-fe/ybj-zlb-sdk.git"
