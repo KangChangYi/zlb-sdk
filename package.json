@@ -1,6 +1,6 @@
 {
   "name": "ybj-zlb-sdk",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "封装 浙里办 JSSDK 的 npm 库",
   "main": "./dist/index.js",
   "scripts": {
