@@ -1,15 +1,15 @@
 import { terser } from "rollup-plugin-terser";
 import babel from "rollup-plugin-babel";
 import typescript from "rollup-plugin-typescript2";
+import pkg from "./package.json";
 
 export default {
   input: "src/index.ts",
-  output: {
-    file: "./dist/index.js",
-    format: "umd",
-    name: "ybj-zlb-sdk",
-    sourceMap: true,
-  },
+  output: [
+    { file: pkg.main, format: "cjs" },
+    { file: pkg.module, format: "es" },
+  ],
+
   plugins: [
     typescript(),
     babel({
