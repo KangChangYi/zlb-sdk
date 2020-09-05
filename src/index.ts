@@ -8,4 +8,5 @@ export {
   zlbGetLocation,
   zlbGoLogin,
   zlbGetUserType,
+  zlbSaveImage,
 } from "./apis/index";
