@@ -3,7 +3,7 @@
   "version": "1.0.1",
   "description": "封装 浙里办 JSSDK 的 npm 库",
   "main": "dist/cjs/index.js",
-  "module":"dist/es/index.esm.js",
+  "module": "dist/es/index.esm.js",
   "scripts": {
     "bundle": "rollup --config",
     "build": "npm run bundle"
@@ -16,6 +16,9 @@
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "registry": "http://npm.zjjf.org.cn"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",

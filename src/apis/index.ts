@@ -143,6 +143,20 @@ function zlbRealAuthentication(
   });
 }
 
+/**
+ * 浙里办  保存图片接口
+ */
+function zlbSaveImage(url: string): Promise<{ result: "true" | "false" }> {
+  return getReady().then(() => {
+    return useSDK({
+      func: window.dd.biz.user.realAuthentication,
+      params: {
+        url,
+      },
+    });
+  });
+}
+
 export {
   zlbRealAuthentication,
   zlbSetTitle,
@@ -153,4 +167,5 @@ export {
   zlbGetLocation,
   zlbGoLogin,
   zlbGetUserType,
+  zlbSaveImage,
 };
