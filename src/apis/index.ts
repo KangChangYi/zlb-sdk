@@ -149,7 +149,7 @@ function zlbRealAuthentication(
 function zlbSaveImage(url: string): Promise<{ result: "true" | "false" }> {
   return getReady().then(() => {
     return useSDK({
-      func: window.dd.biz.user.realAuthentication,
+      func: window.dd.device.notification.saveImage,
       params: {
         url,
       },
