@@ -16,3 +16,4 @@
 8. zlbGoLogin
 9. zlbGetUserType
 10. zlbSaveImage
+11. zlbChooseImage
