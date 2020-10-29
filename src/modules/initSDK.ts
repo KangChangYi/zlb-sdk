@@ -1,6 +1,7 @@
 const sdkNameList: Array<string> = [
   "dd.device.location.get",
   "dd.device.notification.saveImage",
+  "dd.device.notification.chooseImage",
 
   "dd.biz.user.getUserType",
   "dd.biz.user.login",
@@ -12,7 +13,6 @@ const sdkNameList: Array<string> = [
   "dd.biz.util.close",
 
   "dd.biz.navigation.setTitle",
-
 ];
 
 function registerSdkApi(apiList: Array<string>, callBack: Function): void {

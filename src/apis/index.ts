@@ -157,6 +157,21 @@ function zlbSaveImage(url: string): Promise<{ result: "true" | "false" }> {
   });
 }
 
+function zlbChooseImage(
+  upload = false,
+  compress = 2
+): Promise<{ picPath: []; result: "true" | "false" }> {
+  return getReady().then(() => {
+    return useSDK({
+      func: window.dd.device.notification.chooseImage,
+      params: {
+        upload,
+        compress,
+      },
+    });
+  });
+}
+
 export {
   zlbRealAuthentication,
   zlbSetTitle,
@@ -168,4 +183,5 @@ export {
   zlbGoLogin,
   zlbGetUserType,
   zlbSaveImage,
+  zlbChooseImage,
 };
